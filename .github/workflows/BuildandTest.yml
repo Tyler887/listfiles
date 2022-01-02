@@ -51,7 +51,7 @@ jobs:
 
         run: |
 
-          Invoke-ScriptAnalyzer -Path *.ps1 -Recurse -Outvariable issues
+          Invoke-ScriptAnalyzer -Path ./app.ps1 -Recurse -Outvariable issues
 
           $errors   = $issues.Where({$_.Severity -eq 'Error'})
 
