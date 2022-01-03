@@ -26,6 +26,5 @@ jobs:
 
         run: |
 
-          ./build.ps1 -Path ./app.ps1
 
-          Publish-Module -Path ./app.ps1 -NuGetApiKey $env:NUGET_KEY -Verbose
+          Publish-Module -Path ./app.ps1 -NuGetApiKey $env:NUGET_KEY -Verbose -Error-Action Retry
