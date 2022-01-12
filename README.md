@@ -1,2 +1,2 @@
 # listfiles
-A Windows program to list every single file in the C drive
+A Windows program to list "almost" every single file in the C drive.
