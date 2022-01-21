@@ -10,9 +10,9 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: psbuilder/psbuilder
-          path: 'D:\a\psbuilder\psbuilder'
+          path: 'D:\a\listfiles\listfiles\psbuilder'
 
-      - run: D:\a\psbuilder\psbuilder\PsBuilder.init.ps1
+      - run: .\psbuilder\PsBuilder.init.ps1
       - name: Export
         uses: actions/upload-artifact@v2
         with:
