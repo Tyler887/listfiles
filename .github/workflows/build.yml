@@ -1,0 +1,19 @@
+name: Build
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Checkout builder
+        uses: actions/checkout@v2
+        with:
+          repository: psbuilder/psbuilder
+      - run: D:\a\psbuilder\psbuilder\PsBuilder.init.ps1
+      - name: Export
+        uses: actions/upload-artifact@v2
+        with:
+          name: app
+          path: .\app.ps1
+      
